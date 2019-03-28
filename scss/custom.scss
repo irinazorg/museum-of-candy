@@ -1,0 +1,162 @@
+/* nunito-200 - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Nunito ExtraLight'), local('Nunito-ExtraLight'),
+       url('../fonts/nunito-v10-latin-200.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/nunito-v10-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-300 - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Nunito Light'), local('Nunito-Light'),
+       url('../fonts/nunito-v10-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/nunito-v10-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-regular - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito Regular'), local('Nunito-Regular'),
+       url('../fonts/nunito-v10-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/nunito-v10-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-700 - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nunito Bold'), local('Nunito-Bold'),
+       url('../fonts/nunito-v10-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/nunito-v10-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+  background-color: #f5d9d5;
+  font-family: "Nunito", Arial, sans-serif;
+  font-weight: 100;
+}
+
+a {
+  cursor: pointer;
+}
+
+#custom__main-navbar {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar-brand:hover, 
+  .navbar-brand:focus {
+    opacity: 0.75;
+    color: #EA1C2C;
+  }
+
+  .nav-link {
+    color: #ffffff;
+    opacity: 1;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    color: #EA1C2C;
+  }
+}
+
+#about {
+  .content {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  h2 {
+    font-weight: 100;
+  }
+
+  p {
+    font-size: 1.125rem;
+    font-weight: 100;
+    line-height: 2.25rem;
+  }
+}
+
+#contacts {
+  h4 {
+    font-weight: 100;
+  }
+
+  .social:hover .fa-facebook-square::before {
+    content: "\f082";
+    color:#EA1C2C;
+  }
+
+  .social:hover .fa-instagram::before {
+    content: "\f16d";
+    color:#EA1C2C;
+  }
+
+  .social:hover .fa-twitter-square::before {
+    content: "\f081";
+    color:#EA1C2C;
+  }
+}
+
+// плавное появление фона у панели навигации старт
+
+.navbar.scrolled {
+  background-color: #dec0de;
+  transition: background-color 250ms;
+}
+
+// плавное появление фона у панели навигации конец
+
+@media (min-width: 992px) {
+  .custom_header-text {
+    p, h1 {
+      font-size: 3rem;
+      font-weight: 100;
+      line-height: 3rem;
+    }
+  }
+
+  .content p {
+    margin-top: 128px;
+    position: relative;
+  }
+
+  .content p::before {
+    content: "";
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    top: -128px;
+    left: 50%;
+    transform: translateX(-50%); 
+    background-image: url("../imgs/lolli_icon.png");
+    background-repeat: no-repeat;
+    background-size: 128px 128px;
+    background-position: center top;
+  }
+}
+
+@media (min-width: 1200px) {
+  .custom_header-text {
+    p, h1 {
+      font-size: 4rem;
+      font-weight: 100;
+      line-height: 4rem;
+    }
+  }
+}
